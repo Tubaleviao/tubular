@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tubalar';
+  nav = ['chat', 'player', 'shooter', 'notes', 'face', 'hibo']
 }
