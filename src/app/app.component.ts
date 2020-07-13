@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent{
   title = 'tubalar';
-  nav = ['chat', 'player', 'shooter', 'notes', 'face', 'hibo']
+  nav = ['chat', 'player', 'shooter', 'notes', 'face', 'recorder']
+  
 }

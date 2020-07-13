@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+
+$primary: #00FF00;
+$p2: #00cc00;
+$back: black;
+
+body{
+    color: $primary;
+    background-color: $back;
+}
+input{
+    background-color: $back;
+    color: $primary;
+    border: 1px solid $primary;
+    width: 8em;
+}
+a:link {
+	color: $primary;
+	text-decoration: underline;
+}
+a:visited {
+	color: $p2;
+	text-decoration: none;
+}
+a:hover {
+	background-color:$primary;
+	color:$back;
+}

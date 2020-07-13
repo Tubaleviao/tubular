@@ -1,26 +1,27 @@
 
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+<nav class="navbar my-2 navbar-expand-sm navbar-dark bg-transparent">
+  <a href="#">home</a>
+  
+  <div class="navbar-collapse">
+    <div style="width:100%;"></div>
+    <!-- <input class="mr-2 my-2" type="text" placeholder="username...">
+    <input class="mr-2 my-2" type="text" placeholder="password..."> -->
+    <button class="btn btn-outline-success my-2 my-sm-0 mt-2" >profile</button>
+  </div>
+</nav>
 
-<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-  <h5 class="my-0 mr-md-auto font-weight-normal">Tuba.work</h5>
-  <nav class="my-2 my-md-0 mr-md-3">
-    <a *ngFor="let nv of nav" class="p-2 text-dark" href="#"> {{nv}} </a>
-  </nav>
-  <a class="btn btn-outline-primary">Sign Up</a>
-</div>
-
-<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-  <h1 class="display-4">Tuba.work</h1>
-  <p class="lead">For us.</p>
+<div class="px-3 py-3 pt-3 pb-md-4 mx-auto text-center">
+  <h1 class="display-4">tuba.work</h1>
+  <p class="lead">simple open web apps.</p>
 </div>
 
 <div class="container">
-  <div class="card-deck mb-3 text-center">
-    <div *ngFor="let nv of nav" class="card mb-4 box-shadow">
-      <div class="card-header">{{nv}}</div>
-      <div class="card-body">
+  <div class="card-columns mb-3 text-center ">
+    <div *ngFor="let nv of nav" class="card mb-4 bg-transparent border-success" style="min-width: fit-content;">
+      <!-- <div class="card-header border-success">{{nv}}</div> -->
+      <div class="card-body ">
         <h1 class="card-title pricing-card-title">{{nv}}</h1>
-        <button class="btn btn-lg btn-block btn-outline-primary">{{nv}}</button>
+        <a class="btn btn-lg btn-block btn-outline-primary" href="{{nv}}">go</a>
       </div>
     </div>
   </div>
@@ -29,8 +30,8 @@
 <footer class="text-center mastfoot mt-auto">
   <div class="inner">
     <p>
-      Developed on 
-      <a href="https://github.com/tubaleviao/tuba.work">Github</a>
+      developed on 
+      <a href="https://github.com/tubaleviao/tuba.work">github</a>
       , by 
       <a href="https://github.com/tubaleviao">@tubaleviao</a>
     </p>
