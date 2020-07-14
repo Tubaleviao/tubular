@@ -1,0 +1,28 @@
+
+<div class="px-3 py-2 pb-md-4 mx-auto text-center">
+    <h1 class="display-4">tuba.work</h1>
+    <p class="lead">simple open web apps.</p>
+  </div>
+  
+  <div class="container">
+    <div class="card-columns mb-3 text-center ">
+      <div *ngFor="let nv of nav" class="card mb-4 bg-transparent border-success" style="min-width: fit-content;">
+        <!-- <div class="card-header border-success">{{nv}}</div> -->
+        <div class="card-body ">
+          <h1 class="card-title pricing-card-title">{{nv}}</h1>
+          <a class="btn btn-lg btn-block btn-outline-primary" routerLink="/{{nv}}">go</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="text-center mastfoot mt-auto">
+    <div class="inner">
+      <p>
+        developed on 
+        <a href="https://github.com/tubaleviao/tuba.work">github</a>
+        , by 
+        <a href="https://github.com/tubaleviao">@tubaleviao</a>
+      </p>
+    </div>
+  </footer>

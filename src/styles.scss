@@ -25,3 +25,41 @@ a:hover {
 	background-color:$primary;
 	color:$back;
 }
+
+input[type=checkbox] {
+    visibility: hidden;
+}
+
+.checkboxFour {
+    position: relative;
+    display: inline-block;
+    width: auto;
+}
+.checkboxFour label {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid;
+    border-radius: 100px;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    transition: all .2s ease;
+    cursor: pointer;
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    padding-top: 0px;
+    z-index: 1;
+    background: #111;
+}
+.checkboxFour input[type=checkbox]:checked + label {
+    background: $primary;
+}
+.form-control:focus{
+    color:$primary;
+}
+.form-control{
+    color:$p2;
+}
