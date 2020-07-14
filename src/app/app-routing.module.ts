@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { AuthGuard } from './auth.guard'
 
 import { AppComponent } from './app.component';
 import { ChatComponent } from './chat/chat.component';
@@ -15,13 +16,13 @@ import { HomeComponent } from './home/home.component'
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'chat', component: ChatComponent },
-  { path: 'shooter', component: ShooterComponent },
-  { path: 'face', component: FaceComponent },
-  { path: 'player', component: PlayerComponent },
-  { path: 'notes', component: NotesComponent },
-  { path: 'recorder', component: RecorderComponent },
+  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'chat', component: ChatComponent, canActivate: [AuthGuard] },
+  { path: 'shooter', component: ShooterComponent, canActivate: [AuthGuard] },
+  { path: 'face', component: FaceComponent, canActivate: [AuthGuard] },
+  { path: 'player', component: PlayerComponent, canActivate: [AuthGuard] },
+  { path: 'notes', component: NotesComponent, canActivate: [AuthGuard] },
+  { path: 'recorder', component: RecorderComponent, canActivate: [AuthGuard] },
   { path: '**', component: LoginComponent }
 ];
 
