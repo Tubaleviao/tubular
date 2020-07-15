@@ -1,1 +1,24 @@
-<p>player works!</p>
+
+
+<div class="body"><br />
+    <p id="np">Web audio player</p>
+    
+    <div class="bt play" id="play"></div>
+    <div class="bt" id="next"></div>
+    <div id="progress"><div id="progress-buffer"><div id="progress-value"><div class="seeker"></div></div></div></div>
+    <div class="bt" id="vol"></div>
+    <div id="vol-bar"><div id="vol-level"><div><div class="seeker"></div></div></div></div>
+    <audio id="audio" autoplay></audio> <br/>
+    
+    <div class="checkbox random checked"></div>
+    <div class="checkbox repeat"></div>
+    <br/><br/>
+    <div id="upload-progress"></div>
+    <div id="selected"></div>
+    <input type="text" class="search" placeholder="Search..." />
+    <div class="label">
+        <input type="file" id="upio_input" accept="audio/mp3" onchange="selected()" multiple />
+        Upload Files
+    </div><br/>
+    <ul class="musics"><li *ngFor="let m of musics">{{m}}</li></ul>
+</div>
