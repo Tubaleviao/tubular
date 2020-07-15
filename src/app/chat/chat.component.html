@@ -1,10 +1,10 @@
 
-<div class='body'>
-    <div class="chat page">
+<div style="background-color: #001100; border-radius: 1rem;" class='pt-3 container'>
+    <div class="chat">
         <ul class="users">
             <li *ngFor="let u of users | keyvalue"><span [style.opacity]="u.value" [style.color]="getUsernameColor(u.key)">{{u.key}}</span></li>
         </ul>
-        <input (keyup)="send($event, nm)" type="text" class="inputMessage" placeholder="Type here..." #nm>
+        <input class="inputMessage" (keyup)="send($event, nm)" type="text" placeholder="Type here..." style="width: 80%;" #nm>
         <div class="chatArea">
             <ul class="messages">
                 <li class="message" *ngFor="let m of messages" title="{{m.date}}">
