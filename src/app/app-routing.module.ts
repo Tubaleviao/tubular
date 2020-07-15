@@ -18,6 +18,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'chat', component: ChatComponent, canActivate: [AuthGuard] },
+  { path: 'chat/:room', component: ChatComponent, canActivate: [AuthGuard] },
   { path: 'shooter', component: ShooterComponent, canActivate: [AuthGuard] },
   { path: 'face', component: FaceComponent, canActivate: [AuthGuard] },
   { path: 'player', component: PlayerComponent, canActivate: [AuthGuard] },

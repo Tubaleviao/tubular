@@ -2,14 +2,13 @@
 <div class='body'>
     <div class="chat page">
         <ul class="users">
-            <li>{{user.username}}</li>
-            <li *ngFor="let u of users">{{u}}</li>
+            <li *ngFor="let u of users | keyvalue"><span [style.opacity]="u.value" [style.color]="getUsernameColor(u.key)">{{u.key}}</span></li>
         </ul>
-        <input type="text" class="inputMessage" placeholder="Type here..." #nm>
+        <input (keyup)="send($event, nm)" type="text" class="inputMessage" placeholder="Type here..." #nm>
         <div class="chatArea">
             <ul class="messages">
                 <li class="message" *ngFor="let m of messages" title="{{m.date}}">
-                    <span class="username" >{{m.username}}: </span>
+                <span class="username" style="color: {{m.color}};" >{{m.username}}: </span>
                     <span class="messageBody" >{{m.message}}</span>
                 </li>
             </ul>
@@ -17,4 +16,6 @@
     </div>
 </div>
 
+<!--
 <button (click)="send(nm.value)" class="btn btn-lg btn-block btn-outline-success">Send</button>
+-->
