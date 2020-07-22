@@ -7,6 +7,6 @@ import { Component, AfterViewInit, ElementRef } from '@angular/core';
 })
 export class AppComponent{
   title = 'tubalar';
-  nav = ['chat', 'player', 'shooter', 'notes', 'face', 'recorder']
+  nav = ['chat', 'player', 'shooter', 'notes', 'recorder']
   
 }
